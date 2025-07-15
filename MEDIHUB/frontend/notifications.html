@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediHub - Notifications</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e6f0ff, #ffffff);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2a6ad2;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #2a6ad2;
+    }
+
+    .top-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .top-icons i {
+      font-size: 18px;
+      margin-left: 20px;
+      cursor: pointer;
+      color: #2a6ad2;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .container h2 {
+      margin-bottom: 25px;
+      font-size: 26px;
+      color: #2a6ad2;
+      border-bottom: 2px solid #2a6ad2;
+      padding-bottom: 10px;
+    }
+
+    .notification {
+      display: flex;
+      align-items: flex-start;
+      background: #f9f9f9;
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    }
+
+    .notification i {
+      font-size: 20px;
+      margin-right: 15px;
+      color: #2a6ad2;
+      margin-top: 5px;
+    }
+
+    .notification-content {
+      flex: 1;
+    }
+
+    .notification-content h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .notification-content p {
+      font-size: 15px;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">MediHub</div>
+    <div class="top-icons">
+      <i class="fas fa-bell"></i>
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Notifications</h2>
+
+    <div class="notification">
+      <i class="fas fa-calendar-check"></i>
+      <div class="notification-content">
+        <h4>Appointment Confirmed</h4>
+        <p>Your appointment with Dr. Sharma on 18th July at 10:00 AM has been confirmed.</p>
+      </div>
+    </div>
+
+    <div class="notification">
+      <i class="fas fa-syringe"></i>
+      <div class="notification-content">
+        <h4>Vaccination Reminder</h4>
+        <p>You have a scheduled COVID-19 booster dose on 20th July. Please be on time.</p>
+      </div>
+    </div>
+
+    <div class="notification">
+      <i class="fas fa-truck-medical"></i>
+      <div class="notification-content">
+        <h4>Device Return Due</h4>
+        <p>Your oxygen concentrator rental period ends on 22nd July. Please arrange for return.</p>
+      </div>
+    </div>
+
+    <div class="notification">
+      <i class="fas fa-flask"></i>
+      <div class="notification-content">
+        <h4>Lab Test Results Available</h4>
+        <p>Your recent blood test results are now available in the reports section.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediHub - Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background: linear-gradient(135deg, #e6f4f1, #ffffff);
+      color: #111;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px 30px;
+      max-width: 400px;
+      width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .login-container h2 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #0077b6;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #0077b6;
+      outline: none;
+    }
+
+    .login-btn {
+      margin-top: 10px;
+      background-color: #0077b6;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: #005f8e;
+    }
+
+    .links {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: #555;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .links a {
+      color: #0077b6;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .links a:hover {
+      color: #005f8e;
+    }
+
+    .error-message {
+      margin-top: 15px;
+      color: #e60023;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 500px) {
+      .login-container {
+        padding: 30px 20px;
+      }
+
+      .links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return func()">
+      <div class="form-group">
+        <label for="username">Email</label>
+        <input type="text" id="username" name="username" placeholder="Enter your email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+      <div id="error-message" class="error-message"></div>
+    </form>
+
+    <div class="links">
+      <a href="forgot-password.html">Forgot Password?</a>
+      <a href="signup.html">Create Account</a>
+    </div>
+  </div>
+
+  <script>
+    function func() {
+      const email = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
+      const errorMsg = document.getElementById("error-message");
+
+      // Dummy credentials (Replace with real auth or validation)
+      const validEmail = "user@example.com";
+      const validPassword = "password123";
+
+      if (email === validEmail && pass === validPassword) {
+        // Optionally store user details locally
+        const user = {
+          name: "Demo User",
+          email: email,
+          photo: "https://via.placeholder.com/130",
+          phone: "+91 9876543210",
+          location: "India",
+          lastAppointment: "12th July 2025",
+          status: "Active"
+        };
+        localStorage.setItem('medihubUser', JSON.stringify(user));
+
+        alert("Login successful!");
+        window.location.href = "profile.html"; // redirect to profile page
+        return false; // prevent form submission
+      } else {
+        errorMsg.textContent = "Invalid email or password.";
+        return false;
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+

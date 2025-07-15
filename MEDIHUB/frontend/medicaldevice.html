@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediHub - Medical Devices</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e6f4f1, #ffffff);
+      color: #111;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 15px;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      flex: 2;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav ul li a {
+      color: #111;
+      text-decoration: none;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.2s ease-in-out;
+    }
+
+    nav ul li a:hover {
+      background-color: rgba(0, 119, 182, 0.1);
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-icons a {
+      color: #111;
+      font-size: 1.25rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-icons a:hover {
+      color: #0077b6;
+    }
+
+    header.hero {
+      background: linear-gradient(145deg, #e0f7f9, #ffffff);
+      padding: 60px 20px 30px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header.hero h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #003049;
+      margin-top: 20px;
+    }
+
+    .device-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 40px 20px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .device-card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .device-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .device-card img {
+      max-width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .device-card h2 {
+      font-size: 1.25rem;
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .device-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .device-card a {
+      display: inline-block;
+      background-color: #0077b6;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .device-card a:hover {
+      background-color: #005f8e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f8f8f8;
+      font-size: 0.95rem;
+      color: #555;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+      }
+
+      header.hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="doctors.html"><i class="fas fa-user-md"></i> Find Doctors</a></li>
+        <li><a href="appointments.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+        <li><a href="medicaldevice.html"><i class="fas fa-dolly"></i> Medical Devices</a></li>
+        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="notifications.html" title="Notifications"><i class="fas fa-bell"></i></a>
+        <a href="profile.html" title="My Profile"><i class="fas fa-user-circle"></i></a>
+      </div>
+    </nav>
+    <h1>Medical Devices for Rent</h1>
+  </header>
+
+  <section class="device-container">
+    <div class="device-card">
+      <img src="oxygen cylinder.jpg" alt="Oxygen Concentrator">
+      <h2>Oxygen Concentrator</h2>
+      <p>Concentrates oxygen from air by removing nitrogen. Ideal for home respiratory care.</p>
+      <a href="#">Rent</a>
+    </div>
+    <div class="device-card">
+      <img src="nebulizer.jpg" alt="Nebuliser">
+      <h2>Nebuliser</h2>
+      <p>Delivers medication directly to lungs through mist. Useful for asthma and bronchitis.</p>
+      <a href="#">Rent</a>
+    </div>
+    <div class="device-card">
+      <img src="portable ventilator.jpeg" alt="Portable Ventilator">
+      <h2>Portable Ventilator</h2>
+      <p>Lightweight ventilator supporting patients in remote or mobile conditions.</p>
+      <a href="#">Rent</a>
+    </div>
+    <div class="device-card">
+      <img src="vaporizer.jpg" alt="Vaporizer">
+      <h2>Vaporizer</h2>
+      <p>Heats and releases steam infused with medication. Helps relieve nasal congestion.</p>
+      <a href="#">Rent</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 MediHub. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
